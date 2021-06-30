@@ -1,0 +1,25 @@
+/** Write a program which reads a positive integer value and shows its divisors
+Notes:
+let n be our number
+- let d be a divisor of n --> n/d gives a remainder = 0
+- n is a divisor of n
+- The strict divisors of n are <= n/2 (excluding n)
+**/
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+
+    int number=0;
+    printf("Enter Positive Integer Value: ");
+    scanf("%d", &number);
+    printf("\nFactors are: ");
+
+    for(int i=1;i<=(number/2);i++)
+        if ((number%i)==0)
+            printf("%d  ",i);
+
+    printf("%d", number);
+
+    return 0;
+}
