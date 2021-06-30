@@ -7,11 +7,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-int isPrimeFunction(int n){
+bool isPrimeFunction(int n){ // as we are returning 0 or one
     for(int i=2;i<=n/2;i++){
         if(n%i==0)
-            return 0;    // just like boolean
-    return 1;
+            return false; // 0 can be put here    // just like boolean
+    return true; // 1 can be put here
     }
 }
 
