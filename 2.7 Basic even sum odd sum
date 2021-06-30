@@ -1,0 +1,25 @@
+/**
+ Write a program which reads a positive integer value N, calculates and shows the
+ sum of the even numbers <= N
+
+ (also, modify to get the sum of odd numbers)
+**/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int number=0, even_sum=0, odd_sum=0;
+    printf("Enter number: ");
+    scanf("%d",&number);
+
+    for(int i=1;i<=number;i++){
+        if(i%2==0)
+            even_sum+=i;
+        else
+            odd_sum+=i;
+        }
+    printf("\nEven sum: %d\n\nOdd sum: %d\n",even_sum, odd_sum);
+
+    return 0;
+}
