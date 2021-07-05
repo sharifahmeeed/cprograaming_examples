@@ -3,7 +3,7 @@
 
 int main(){
     printf("Enter two number: ");
-    int i[]={};
+    int i[1]={};
     i[1]=0, i[2]=0;
     scanf("%d%d",&i[1],&i[2]);
    // fflush(stdin);
