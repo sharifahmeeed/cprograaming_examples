@@ -1,0 +1,55 @@
+/**
+checking elements in a array 
+
+check how many times an element N occurs in an array
+
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void fillArray(int arr[], int n){
+      for(int i=0; i<n;i++){
+        printf("\nEnter %d element: ",i+1);
+        scanf("%d",&arr[i]);
+    }
+}
+
+void printArray(int arr[], int n){
+    int sum=0, mul=1;
+        for(int i=0; i<n;i++){
+            printf("\n%d element is %d ",i+1,arr[i]);
+            sum+=arr[i];
+            mul=mul*arr[i];
+            }
+        printf("\nSum= %d\nMul= %d\n",sum, mul);
+}
+
+int occurs(int arr[], int n, int searchElement){
+    int count=0;
+    for(int i=0; i<n;i++){
+        if (arr[i]==searchElement)
+        count++;
+    }
+    return count;
+}
+
+
+
+int main() {
+    printf("Enter element n: ");
+    int n = 0;
+    scanf("%d", &n);
+    int arr[n];
+
+    fillArray(arr, n);
+
+    printf("\nCheck element n: ");
+    int check = 0;
+    scanf("%d", &check);
+
+    printf("\n%d occurs %d times\n",check,occurs(arr, n, check));
+
+    return 0;
+}
+
