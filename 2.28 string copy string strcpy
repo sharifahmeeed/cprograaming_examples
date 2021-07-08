@@ -1,0 +1,20 @@
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void copyString(char source[], char destination[]) {
+    for(int i = 0; i < strlen(source); i++)
+        destination[i] = source[i];
+   destination[strlen(source)] = '\0';
+}
+int main() {
+    char name[] = "Ali Badran";
+    char copy[strlen(name) + 1];
+    copyString(name, copy); //  strcpy(copy,name);
+    printf("%d\n", strlen(copy));
+    puts(copy); // scanf("%s", name); /// first last it will not accept space as a sting
+
+    return 0;
+}
