@@ -1,0 +1,17 @@
+/**
+1. scanf doesn't accept with space otherwise puts can do this 
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    printf("Enter your full name: ");
+
+    char name[20] = {};
+//    scanf("%s", name); /// first last it will not accept space as a sting 
+    gets(name);
+//    printf("Hi %s", name);
+    puts(name);
+    return 0;
+}
