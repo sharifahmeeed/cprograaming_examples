@@ -1,0 +1,24 @@
+/**
+1. own strlen() function and last char of the string is '\0'
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int strlen(char str[]){
+    int count=0;
+    for(int i=0; str[i]!='\0'; i++)
+        count++;
+    return count;
+
+}
+
+
+
+int main(){
+    char str[] = "My custom function to know the number of char";
+    printf("Number: %d",strlen(str));
+
+    return 0;
+}
