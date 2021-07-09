@@ -1,0 +1,27 @@
+/**
+1. string copy to reverse
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+void Reverse(char str[],char reverse[]){
+    for(int i=strlen(str)-1, j=0; i>=0; i--, j++)  // for loop double variable supported
+       // printf("%c",str[i]);
+       reverse[strlen(str)-1-i]=str[i];
+       reverse[strlen(str)]='\0'; // without this extra char will show
+
+    for(int i=0; i<=strlen(reverse);i++)
+        str[i]= reverse[i];
+
+}
+
+int main(){
+    char str[] = "This is a test sharif ahmed";
+    char reverse[strlen(str)];
+    Reverse(str, reverse);
+    puts(reverse);
+    puts(str);
+    return 0;
+}
