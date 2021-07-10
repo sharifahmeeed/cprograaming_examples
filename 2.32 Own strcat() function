@@ -1,0 +1,46 @@
+/**
+1. own strcat() function that is amazing and can be added as per requirements 
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int strlen(char str[]){
+    int count=0;
+    for(int i=0; str[i]!='\0'; i++)
+        count++;
+    return count;
+
+}
+
+void strcat(char destination[], char source[]){
+    int destLength= strlen(destination), sourceLength=strlen(source);
+    printf("%d", destLength+sourceLength);
+
+
+    for(int i=destLength,j=0; j<sourceLength; j++, i++){
+         destination[i]= source[j];
+
+    }
+
+     destination[destLength+sourceLength]='\0';
+
+}
+
+
+
+int main(){
+    char str[] = "Hello";
+    char destn[strlen(str)];
+    printf("Number: %d\n",strlen(str));
+
+    strcat(str, " World!"); // Hello World! should be
+
+    printf("\n%d\n",str[12]=='\0');
+    puts(str);
+
+
+
+    return 0;
+}
