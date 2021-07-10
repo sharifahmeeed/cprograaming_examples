@@ -1,0 +1,39 @@
+/**
+1. own strlen() function and last char of the string is '\0'
+2. // last character of a string must be '\0' char
+**/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int strlen(char str[]){
+    int count=0;
+    for(int i=0; str[i]!='\0'; i++)
+        count++;
+    return count;
+
+}
+
+void strcpy(char destinaion[], char source[]){
+        for(int i=0; i<strlen(source); i++){
+            destinaion[i]=source[i];
+        }
+
+        destinaion[strlen(source)]='\0'; // last character of a string must be '\0' char
+        printf("%d\n",destinaion[strlen(source)]=='\0');
+
+}
+
+int main(){
+    char str[] = "Md Sharif Ahmed";
+    char destn[strlen(str)];
+    printf("Number: %d\n",strlen(str));
+    strcpy(destn,str);
+    puts(destn);
+    puts(destn);
+    puts(destn);
+
+
+    return 0;
+}
